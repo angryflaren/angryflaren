@@ -8,7 +8,6 @@ export default defineConfig({
    * Указываем базовый путь, так как сайт будет в подпапке.
    * Это название вашего репозитория.
    */
-  base: '/jsonresume-theme-react/',
 
   plugins: [react()],
 
