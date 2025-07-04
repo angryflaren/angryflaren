@@ -21,7 +21,7 @@ export const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
     <SidebarSection title="sections.certificates" contentClassName="space-y-3">
       {certificates.map((certificate, index) => {
         const formattedDate = useDate(certificate.date);
-        const dateInfo = certificate.date ? `${t('date.label')}: ${formattedDate}` : '';
+        const dateInfo = certificate.date ? `${t('date.label')} ${formattedDate}` : '';
 
         return (
           <SidebarCard
@@ -31,12 +31,10 @@ export const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
                 <div className="mr-3 text-brand">
                   <BsAward className="w-5 h-5" />
                 </div>
-                <div>{certificate.name}</div>
+                <div className="text-base font-semibold text-foreground mb-1">{certificate.name}</div>
               </div>
             }
-            subtitle={
-              certificate.issuer ? `${t('common.issuedBy')}: ${certificate.issuer}` : undefined
-            }
+            subtitle={certificate.issuer}
             date={dateInfo}
             url={certificate.url}
             urlLabel={t('common.viewCertificate')}

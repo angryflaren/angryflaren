@@ -1,43 +1,57 @@
 {
   "sections": {
-    "work": "Опыт Работы",
+    "about": "Обо мне",
+    "work": "Опыт работы",
     "education": "Образование",
-    "skills": "Навыки",
+    "skills": "Ключевые навыки",
     "projects": "Проекты",
-    "awards": "Награды",
-    "certificates": "Сертификаты",
+    "awards": "Награды и достижения",
+    "certificates": "Сертификаты и курсы",
     "publications": "Публикации",
     "languages": "Языки",
     "interests": "Интересы",
     "references": "Рекомендации",
-    "volunteer": "Волонтёрство"
+    "volunteer": "Волонтерская деятельность"
   },
   "common": {
-    "present": "Настоящее Время",
-    "visitWebsite": "Посетить Сайт",
-    "viewPublication": "Просмотр Публикации",
-    "viewProject": "Просмотр Проекта",
-    "viewCertificate": "Просмотр Сертификата",
-    "viewAward": "Просмотр Награды",
+    "present": "по н. в.",
+    "visitWebsite": "Сайт проекта",
+    "viewPublication": "Читать публикацию",
+    "viewProject": "Посмотреть проект",
+    "viewCertificate": "Посмотреть сертификат",
+    "viewAward": "Подробнее",
+    "viewProfile": "Посмотреть профиль",
+    "view": "Смотреть",
     "at": "в",
-    "contactInfo": "Контактная Информация",
-    "email": "Электронная Почта",
+    "awardedBy": "Выдана:",
+    "issuedBy": "Выдан:",
+    "contactInfo": "Контакты",
+    "email": "Email",
     "phone": "Телефон",
-    "website": "Веб-сайт",
-    "socialProfiles": "Социальные Профили",
+    "website": "Сайт",
+    "socialProfiles": "Профили",
     "profile": "профиль",
+    "duration": {
+      "year": "год",
+      "years": "года",
+      "month": "месяц",
+      "months": "месяцев",
+      "lessThanMonth": "менее месяца"
+    },
     "fluency": {
       "native": "Родной",
-      "fluent": "Свободный",
+      "fluent": "Свободное владение",
       "advanced": "Продвинутый",
+      "professional": "Профессиональный",
       "intermediate": "Средний",
-      "basic": "Базовый"
+      "basic": "Базовый",
+      "beginner": "Начальный"
     }
   },
   "date": {
-    "format": "MMM yyyy",
-    "range": "{{start}} - {{end}}",
-    "present": "{{start}} - Настоящее Время",
-    "label": "Дата"
+    "format": "LLLL yyyy",
+    "range": "{{start}} — {{end}}",
+    "present": "{{start}} — по н. в.",
+    "label": "Дата:"
   }
 }

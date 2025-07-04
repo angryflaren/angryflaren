@@ -15,9 +15,12 @@ import { Volunteer } from './Volunteer';
 
 interface ResumeProps {
   resume: ResumeSchema;
+  currentLanguage?: 'en' | 'ru';
+  onLanguageChange?: (lang: 'en' | 'ru') => void;
 }
 
-export const Resume: FC<ResumeProps> = memo(({ resume }) => {
+export const Resume: FC<ResumeProps> = memo(
+  ({ resume, currentLanguage, onLanguageChange }) => {
   const {
     basics,
     work,
@@ -39,7 +42,11 @@ export const Resume: FC<ResumeProps> = memo(({ resume }) => {
     <div
       className={`container p-3 mx-auto lg:w-[960px] bg-color text-text print:max-w-full print:p-0 print:w-full print:px-6`}
     >
-      <Header basics={basics} />
+      <Header
+        basics={basics}
+        currentLanguage={currentLanguage}
+        onLanguageChange={onLanguageChange}
+      />
 
       <div className={`flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3`}>
         <div className={`lg:w-2/3 print:w-[72%]`}>

@@ -1,0 +1,47 @@
+name: Deploy Resume to GitHub Pages
+
+on:
+  # Запускать при каждом push в ветку 'main'
+  push:
+    branches: [ "main" ]
+  # Позволяет запускать вручную со страницы Actions
+  workflow_dispatch:
+
+# Устанавливаем права для GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build static site
+        # Теперь мы используем стандартную команду сборки Vite
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Загружаем папку 'dist', созданную на шаге сборки
+          path: './dist'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

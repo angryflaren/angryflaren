@@ -1,314 +1,172 @@
 {
   "language": "en",
   "basics": {
-    "name": "John Doe",
-    "label": "Full Stack Developer",
-    "email": "john.doe@example.com",
-    "phone": "+1 555 123 4567",
-    "url": "https://example.com/johndoe",
-    "summary": "Full Stack Developer with 6 years of experience in developing web and mobile applications. Specialized in JavaScript and modern frameworks like React and Node.js. Passionate about scalable architectures and performance optimization.",
+    "name": "Matvey Zhuchkov",
+    "label": "Backend Developer (Intern)",
+    "email": "matthewzhv@outlook.com",
     "location": {
-      "address": "123 Main Street",
-      "postalCode": "90210",
-      "city": "Beverly Hills",
-      "region": "California",
-      "countryCode": "US"
+      "city": "Nizhny Novgorod",
+      "countryCode": "RU",
+      "region": "Russia"
     },
     "profiles": [
       {
-        "network": "LinkedIn",
-        "username": "johndoe",
-        "url": "https://linkedin.com/in/johndoe"
-      },
-      {
         "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "username": "angryflaren",
+        "url": "https://github.com/angryflaren"
       },
       {
-        "network": "Twitter",
-        "username": "johndoe",
-        "url": "https://twitter.com/johndoe"
-      },
-      {
-        "network": "Medium",
-        "username": "johndoe",
-        "url": "https://medium.com/@johndoe"
+        "network": "Telegram",
+        "username": "Alikkuc",
+        "url": "https://t.me/Alikkuc"
       }
-    ]
+    ],
+    "summary": "I am a Computer Science student focused on server and cloud technologies. I have practical, hands-on experience in Linux server administration (Ubuntu, Nginx, SSH) and a solid foundation in C#, C++, and Python.\n\nI am seeking a summer internship opportunity to apply my skills to practical challenges in the FinTech, Telecom, or Cloud Services sectors.\n\nMy immediate professional goal is to deepen my knowledge of ASP.NET Core and Docker to build a personal portfolio website."
   },
-  "work": [
-    {
-      "name": "Tech Solutions Inc.",
-      "position": "Lead Full Stack Developer",
-      "url": "https://techsolutionsinc.example.com",
-      "startDate": "2021-03-01",
-      "summary": "Led a team of developers in creating web and mobile applications for international clients. Implemented best practices in software development and architecture.",
-      "highlights": [
-        "Led a team of 8 developers on 5 major client projects",
-        "Implemented microservices architecture reducing deployment times by 60%",
-        "Improved application performance reducing load times by 40%",
-        "Set up CI/CD processes enabling daily deployments"
-      ]
-    },
-    {
-      "name": "Innovative Startup LLC",
-      "position": "Senior Full Stack Developer",
-      "url": "https://innovativestartup.example.com",
-      "startDate": "2018-09-01",
-      "endDate": "2021-02-28",
-      "summary": "Developed a SaaS platform for customer relationship management using React, Node.js, and GraphQL. Designed and implemented key features and responsive user interfaces.",
-      "highlights": [
-        "Developed and launched 3 major features generating 30% additional revenue",
-        "Optimized database queries reducing API response time by 65%",
-        "Mentored 4 junior developers, accelerating their technical growth",
-        "Participated in a complete UI overhaul with a component-driven approach"
-      ]
-    },
-    {
-      "name": "Creative Web Agency",
-      "position": "Frontend Developer",
-      "url": "https://creativeweb.example.com",
-      "startDate": "2017-01-15",
-      "endDate": "2018-08-31",
-      "summary": "Designed and developed user interfaces for clients in the luxury, finance, and e-commerce sectors.",
-      "highlights": [
-        "Developed over 15 responsive websites for premium clients",
-        "Created complex animations and interactions enhancing user engagement",
-        "Implemented design system methodologies speeding up development by 40%"
-      ]
-    }
-  ],
   "education": [
     {
-      "institution": "National Polytechnic University",
-      "url": "https://npu.example.edu",
-      "area": "Software Engineering",
-      "studyType": "Master's Degree",
-      "startDate": "2015-09-01",
-      "endDate": "2017-06-30",
-      "score": "Summa Cum Laude",
-      "courses": [
-        "Software Architecture",
-        "Advanced Web Development",
-        "Artificial Intelligence",
-        "Cybersecurity",
-        "Data Science"
-      ]
-    },
-    {
-      "institution": "State University",
-      "url": "https://stateu.example.edu",
-      "area": "Computer Science",
+      "institution": "Nizhny Novgorod State Technical University n.a. R.E. Alekseev (NNSTU)",
+      "area": "Computer Science and Engineering",
       "studyType": "Bachelor's Degree",
-      "startDate": "2012-09-01",
-      "endDate": "2015-06-30",
-      "score": "4.0 GPA",
-      "courses": [
-        "Algorithms and Data Structures",
-        "Object-Oriented Programming",
-        "Databases",
-        "Discrete Mathematics",
-        "Operating Systems"
-      ]
+      "startDate": "2024-09-01",
+      "endDate": "2028-08-31"
     }
   ],
   "skills": [
     {
-      "name": "Frontend",
-      "level": "Expert",
+      "name": "Programming Languages",
+      "level": "Fundamental knowledge",
       "keywords": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Vue.js",
-        "HTML5",
-        "CSS3",
-        "SASS",
-        "Webpack",
-        "Jest",
-        "Next.js"
+        "Python",
+        "C#",
+        "C++",
+        ".NET"
       ]
     },
     {
-      "name": "Backend",
-      "level": "Advanced",
+      "name": "DevOps & Infrastructure",
+      "level": "Hands-on experience",
       "keywords": [
-        "Node.js",
-        "Express",
-        "NestJS",
-        "GraphQL",
+        "Linux (Ubuntu)",
+        "Nginx",
+        "Docker (learning)",
+        "SSH",
+        "Virtualization (VM)"
+      ]
+    },
+    {
+      "name": "Cloud Platforms",
+      "level": "Basic skills",
+      "keywords": [
+        "AWS (EC2, Lambda)",
+        "Google Cloud",
+        "Azure",
+        "Cloudflare"
+      ]
+    },
+    {
+      "name": "APIs & Protocols",
+      "level": "Understanding of principles",
+      "keywords": [
         "REST API",
-        "MongoDB",
-        "PostgreSQL",
-        "Redis",
-        "Docker"
+        "HTTP/HTTPS",
+        "SSL",
+        "DNS"
       ]
-    },
-    {
-      "name": "Mobile",
-      "level": "Intermediate",
-      "keywords": ["React Native", "Flutter", "Progressive Web Apps", "Firebase"]
-    },
-    {
-      "name": "DevOps",
-      "level": "Intermediate",
-      "keywords": ["AWS", "GCP", "CI/CD", "GitHub Actions", "Kubernetes", "Terraform"]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Fluent"
-    },
-    {
-      "language": "French",
-      "fluency": "Intermediate"
-    },
-    {
-      "language": "German",
-      "fluency": "Basic"
     }
   ],
   "projects": [
     {
-      "name": "Project Management Platform",
-      "description": "Comprehensive web application for project management featuring real-time tracking, metrics, and automated reporting.",
+      "name": "Performance Research of Struct vs. Class in C#",
+      "description": "A research project focused on a comparative performance analysis of structs and classes in C#. The project involved creating test scenarios and benchmarks to identify optimal use cases for each data type.",
       "highlights": [
-        "Micro-frontend architecture with React and Module Federation",
-        "Node.js backend with GraphQL API",
-        "Real-time notification system using WebSockets",
-        "Data analysis and visualizations with D3.js"
+        "Implemented tests to measure object creation and data access speed.",
+        "Analyzed the performance impact of various usage scenarios.",
+        "Formulated recommendations for choosing between struct and class based on the specific task."
       ],
-      "keywords": ["React", "Node.js", "GraphQL", "MongoDB", "WebSockets", "Docker"],
-      "startDate": "2020-05-01",
-      "endDate": "2020-11-30",
-      "url": "https://projectplatform.example.com",
-      "roles": ["Architect", "Lead Developer", "DevOps"]
+      "keywords": [
+        "C#",
+        ".NET",
+        "Performance",
+        "Data Structures",
+        "Benchmark"
+      ],
+      "url": "https://github.com/angryflaren/csharp-struct-vs-class-performance"
     },
     {
-      "name": "Fitness Tracking Mobile App",
-      "description": "Cross-platform application allowing users to track physical activities, set goals, and view progress.",
+      "name": "Game Process Automation",
+      "description": "Developed a set of Python scripts to automate actions in multiplayer online games. The project involved the following tasks:",
       "highlights": [
-        "Developed with React Native for iOS and Android",
-        "Bluetooth synchronization with connected devices",
-        "Offline mode with automatic synchronization",
-        "Custom data visualization and progress reports"
+        "Analyzed network traffic and protocols to understand client-server communication logic.",
+        "Applied basic reverse engineering methods to interact with the game client without a public API.",
+        "Configured and administered virtual machines to create isolated and stable environments for the scripts."
       ],
-      "keywords": ["React Native", "Redux", "Firebase", "Realm", "Bluetooth LE", "Charts"],
-      "startDate": "2019-02-01",
-      "endDate": "2019-08-15",
-      "url": "https://fittrackapp.example.com",
-      "roles": ["Mobile Developer", "UI/UX Designer"]
+      "keywords": [
+        "Python",
+        "Reverse Engineering (basic)",
+        "Virtual Machines",
+        "Networking"
+      ]
+    },
+    {
+      "name": "School Project: Telegram-based VPN Service Concept",
+      "description": "Developed a service concept using Telegram as a platform to create a virtual private network. This project demonstrates an understanding of networking protocols and API integration principles.",
+      "highlights": [
+        "Designed a client-server architecture using the Telegram Bot API.",
+        "Analyzed methods for traffic encapsulation and ensuring security.",
+        "The project was awarded a prize at a school science conference."
+      ],
+      "keywords": [
+        "Python",
+        "Telegram Bot API",
+        "Networking",
+        "VPN (concept)",
+        "Security"
+      ],
+      "startDate": "2022-01-01",
+      "endDate": "2022-05-01"
     }
   ],
   "certificates": [
     {
-      "name": "Google Cloud Professional Cloud Architect",
-      "issuer": "Google Cloud",
-      "date": "2022-05-20",
-      "url": "https://cloud.google.com/certification/cloud-architect"
+      "name": "Network and System Administration",
+      "date": "2020-11-20",
+      "issuer": "Chaikovsky Industrial College",
+      "summary": "Certificate of Participation in a Professional Skills Trial."
     },
     {
-      "name": "AWS Solutions Architect - Associate",
-      "issuer": "Amazon Web Services",
-      "date": "2021-09-10",
-      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
-    },
-    {
-      "name": "Certified Scrum Master",
-      "issuer": "Scrum Alliance",
-      "date": "2020-03-15",
-      "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+      "name": "Information Systems and Programming",
+      "date": "2020-02-15",
+      "issuer": "Chaikovsky College of Industrial Technologies and Management",
+      "summary": "Certificate of Completion for pre-specialization courses (12 hours)."
     }
   ],
-  "awards": [
+  "languages": [
     {
-      "title": "Digital Innovation Award",
-      "date": "2022-06-15",
-      "awarder": "Tech Innovation Association",
-      "summary": "Recognition for designing an innovative solution in the connected health domain.",
-      "url": "https://techinnovation.example.org/awards/2022"
+      "language": "Russian",
+      "fluency": "Native"
     },
     {
-      "title": "Tech Hackathon - First Prize",
-      "date": "2019-11-25",
-      "awarder": "City Tech",
-      "summary": "First prize in a hackathon for developing a sustainable urban mobility solution.",
-      "url": "https://citytech.example.com/hackathon/2019"
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "CodeForAmerica",
-      "position": "Mentor",
-      "url": "https://codeforamerica.example.org",
-      "startDate": "2020-01-01",
-      "summary": "Mentoring young developers and organizing coding workshops for underserved communities.",
-      "highlights": [
-        "Mentored over 20 young developers",
-        "Organized 12 web and mobile programming workshops",
-        "Contributed to open-source projects benefiting public services"
-      ]
-    },
-    {
-      "organization": "Developers Without Borders",
-      "position": "Volunteer Developer",
-      "url": "https://devswithoutborders.example.org",
-      "startDate": "2018-06-01",
-      "endDate": "2019-12-31",
-      "summary": "Developed applications for international NGOs facilitating resource management and field communication.",
-      "highlights": [
-        "Developed a crisis management application used by 3 NGOs",
-        "Designed a data collection system functional in low-connectivity areas",
-        "Trained local staff in tool usage and maintenance"
-      ]
+      "language": "English",
+      "fluency": "A2 (Able to read technical documentation)"
     }
   ],
   "interests": [
     {
-      "name": "Photography",
-      "keywords": ["Urban", "Travel", "Black & White"]
+      "name": "Cinema",
+      "keywords": [
+        "Science Fiction",
+        "Psychological Thrillers",
+        "Auteur Cinema"
+      ]
     },
     {
-      "name": "Water Sports",
-      "keywords": ["Sailing", "Scuba Diving", "Kayaking"]
-    },
-    {
-      "name": "Gastronomy",
-      "keywords": ["Asian Cuisine", "Pastry", "Wine Tasting"]
-    }
-  ],
-  "references": [
-    {
-      "name": "Sarah Smith",
-      "reference": "John is an exceptional developer who perfectly blends technical skills with strategic vision. His ability to understand business needs and translate them into technical solutions is remarkable. A true asset to any team.",
-      "position": "Technical Director, Tech Solutions Inc."
-    },
-    {
-      "name": "Mark Green",
-      "reference": "I had the privilege of working with John on several complex projects. His technical expertise and rigorous methodology were crucial to the success of our initiatives. He is also an excellent communicator and a natural mentor.",
-      "position": "CTO, Innovative Startup LLC"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Micro-Frontend Architectures: Challenges and Solutions",
-      "publisher": "Developer Journal",
-      "releaseDate": "2022-08-10",
-      "url": "https://devjournal.example.com/micro-frontends",
-      "summary": "In-depth analysis of micro-frontend architectures, presenting advantages, challenges, and optimal implementation strategies for modern web applications."
-    },
-    {
-      "name": "Optimizing React Applications: Beyond the Basics",
-      "publisher": "Dev.to",
-      "releaseDate": "2021-04-22",
-      "url": "https://dev.to/johndoe/optimizing-react-apps",
-      "summary": "Practical guide on advanced performance optimization techniques in React applications, including case studies and benchmarks."
+      "name": "Professional Development",
+      "keywords": [
+        "Software Architecture",
+        "Cloud Technologies",
+        "System Programming"
+      ]
     }
   ]
 }

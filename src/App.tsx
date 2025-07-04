@@ -1,27 +1,31 @@
-import { FC, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/config';
-import { Resume } from './components/Resume';
+import { Resume as ResumeComponent } from './components/Resume';
 import type { ResumeSchema } from './types/resumeSchema';
-import type { Locale } from './i18n/config';
+import resumeEn from '../resume.json';
+import resumeRu from '../resume.ru.json';
 
-interface AppProps {
-  resume: ResumeSchema;
-  language?: Locale;
-}
+const App: FC = () => {
+  const [lang, setLang] = useState<'en' | 'ru'>('ru');
+  const [resume, setResume] = useState<ResumeSchema>(lang === 'ru' ? resumeRu : resumeEn);
 
-const App: FC<AppProps> = ({ resume, language = 'en' }) => {
+  const handleLanguageChange = (newLang: 'en' | 'ru') => {
+    setLang(newLang);
+  };
+
   useEffect(() => {
-    console.log('Setting language to:', language);
-    i18n.changeLanguage(language);
-
-    const html = document.documentElement;
-    html.setAttribute('lang', language);
-  }, [language]);
+    i18n.changeLanguage(lang);
+    setResume(lang === 'ru' ? resumeRu : resumeEn);
+  }, [lang]);
 
   return (
     <I18nextProvider i18n={i18n}>
-      <Resume resume={resume} />
+      <ResumeComponent
+        resume={resume}
+        currentLanguage={lang}
+        onLanguageChange={handleLanguageChange}
+      />
     </I18nextProvider>
   );
 };

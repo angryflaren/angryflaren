@@ -1,14 +1,13 @@
 import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import resumeData from '../resume.json';
 import App from './App.tsx';
-import type { Locale } from './i18n/config';
+import './i18n/config';
 
-const language = (import.meta.env.VITE_LANGUAGE as Locale) || 'en';
+const root = createRoot(document.getElementById('root')!);
 
-createRoot(document.getElementById('root')!).render(
+root.render(
   <StrictMode>
-    <App resume={resumeData} language={language} />
+    <App />
   </StrictMode>
 );

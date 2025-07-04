@@ -6,7 +6,8 @@ import {
   FaMobileAlt,
   FaXing,
 } from 'react-icons/fa';
-import { SiLeetcode, SiMedium } from 'react-icons/si';
+// Импортируем иконку Telegram
+import { SiTelegram, SiLeetcode, SiMedium } from 'react-icons/si';
 import { BsStackOverflow } from 'react-icons/bs';
 import { BiEnvelope } from 'react-icons/bi';
 
@@ -14,6 +15,8 @@ export const socialIcons = {
   github: { icon: FaGithub, color: '#333333' },
   linkedin: { icon: FaLinkedin, color: '#0077B5' },
   twitter: { icon: FaTwitter, color: '#1DA1F2' },
+  // Добавляем Telegram в список
+  telegram: { icon: SiTelegram, color: '#26A5E4' },
   leetcode: { icon: SiLeetcode, color: '#FFA116' },
   medium: { icon: SiMedium, color: '#000000' },
   stackoverflow: { icon: BsStackOverflow, color: '#F48024' },

@@ -1,11 +1,12 @@
 // Mock the icons directly
-vi.mock('react-icons/fa', () => ({
-  FaMapMarkerAlt: () => <span data-testid="mock-location-icon" />,
-  FaGithub: () => <span data-testid="mock-github-icon" />,
-  FaLinkedin: () => <span data-testid="mock-linkedin-icon" />,
-  FaTwitter: () => <span data-testid="mock-twitter-icon" />,
-  FaMobileAlt: () => <span data-testid="mock-mobile-icon" />,
-  FaXing: () => <span data-testid="mock-xing-icon" />,
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string) => key, // Функция t будет просто возвращать ключ
+    i18n: {
+      changeLanguage: () => new Promise(() => {}), // Имитация смены языка
+      language: 'en',
+    },
+  }),
 }));
 
 vi.mock('react-icons/si', () => ({
@@ -70,10 +71,10 @@ describe('Header Component', () => {
 
   it('renders basic information correctly without image', () => {
     const basics = getMockBasics();
-    const { container } = render(<Header basics={basics} />);
+    render(<Header basics={basics} />);
 
     // Debug the rendered output
-    console.log(container.innerHTML);
+    render(<Header basics={basics} />);
 
     // Check for necessary elements
     expect(screen.getByRole('heading', { level: 1, name: basics.name })).toBeInTheDocument();
@@ -94,11 +95,10 @@ describe('Header Component', () => {
   it('renders the image when basics.image URL is provided', () => {
     const imageUrl = 'https://example.com/profile.jpg';
     const basics = getMockBasics({ image: imageUrl });
-    // Destructure container from render result
-    const { container } = render(<Header basics={basics} />);
+    render(<Header basics={basics} />);
 
     // Query the DOM directly for the img tag using the container
-    const img = container.querySelector('img');
+    const img = screen.getByRole('img');
     expect(img).toBeInTheDocument(); // Check if the element exists in the DOM
 
     // Verify attributes on the found element
