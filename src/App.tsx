@@ -3,7 +3,7 @@ import { I18nextProvider, useTranslation } from 'react-i18next';
 import i18n from './i18n/config';
 import { Resume as ResumeComponent } from './components/Resume';
 import type { ResumeSchema } from './types/resumeSchema';
-import resumeEn from '../resume.en.json';
+import resumeEn from '../resume.json';
 import resumeRu from '../resume.ru.json';
 
 const App: FC = () => {
