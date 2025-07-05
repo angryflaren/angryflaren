@@ -27,24 +27,24 @@
   }
 
   [data-theme='dark'] {
-    /* Dark Mode Theme */
-    --color-brand: #60a5fa; /* Lighter blue for dark mode */
+    /* Dark Mode Theme - Refined Palette */
+    --color-brand: #60a5fa; /* A slightly brighter blue for better contrast */
     --color-brand-light: #93c5fd;
     --color-brand-dark: #3b82f6;
 
     /* Text Colors */
-    --color-text: #e5e7eb; /* Light gray for main text */
-    --color-text-secondary: #9ca3af; /* Medium gray for secondary text */
-    --color-text-tertiary: #6b7280; /* Darker gray for tertiary text */
-    --color-text-muted: #4b5563;
+    --color-text: #e2e8f0; /* Lighter gray for main text (slate-200) */
+    --color-text-secondary: #94a3b8; /* Medium gray for secondary text (slate-400) */
+    --color-text-tertiary: #64748b; /* Darker gray for tertiary text (slate-500) */
+    --color-text-muted: #475569; /* (slate-600) */
 
     /* Background Colors */
-    --color-bg: #111827; /* Very dark gray */
-    --color-bg-secondary: #1f2937; /* Dark gray for cards */
-    --color-bg-accent: #1e293b; /* Dark blue accent */
+    --color-bg: #0f172a; /* Dark navy blue, not pure black (slate-900) */
+    --color-bg-secondary: #1e293b; /* Slightly lighter navy blue for cards (slate-800) */
+    --color-bg-accent: #334155; /* Accent background (slate-700) */
 
     /* Border Colors */
-    --color-border: #374151; /* Gray for borders */
+    --color-border: #334155; /* Gray for borders (slate-700) */
 
     /* Accent colors remain the same, but you could adjust them if needed */
     --color-accent-primary: #10b981;
