@@ -28,23 +28,23 @@
 
   [data-theme='dark'] {
   /* Dark Mode Theme  */
-  --color-brand: #4f9efc;          /* A slightly brighter blue for better contrast */
-  --color-brand-light: #a4cafe;
-  --color-brand-dark: #2c7be5;
+  --color-brand: #4f9efc;           /* Стильный акцент в духе Fluent Design */
+  --color-brand-light: #93c5fd;
+  --color-brand-dark: #1e68e0;
 
   /* Text Colors */
-  --color-text: #f1f5f9;           /* Light gray for main text (almost white) */
-  --color-text-secondary: #cbd5e1; /* Medium gray for secondary text */
-  --color-text-tertiary: #94a3b8;  /* Darker gray for tertiary text */
-  --color-text-muted: #64748b;     /* Unchanged */
+  --color-text: #e6e9ef;            /* Основной текст — почти белый, но мягкий */
+  --color-text-secondary: #b0b8c4;  /* Вторичный текст */
+  --color-text-tertiary: #8b97a8;   /* Третичный текст */
+  --color-text-muted: #6b7280;      /* Приглушённый серый (слегка теплее) */
 
   /* Background Colors */
-  --color-bg: #1a1a1a;             /* Deep, soft charcoal */
-  --color-bg-secondary: #252526;   /* Slightly lighter slate for cards */
-  --color-bg-accent: #2d2d30;      /* Accent background */
+  --color-bg: #1b1d1f;              /* Глубокий тёмный фон, не чёрный */
+  --color-bg-secondary: #25272a;    /* Карточки, панели */
+  --color-bg-accent: #2e3135;       /* Акцентный фон (hover, блоки) */
 
   /* Border Colors */
-  --color-border: #3c3c43;         /* Neutral gray for borders */
+  --color-border: #3c3f44;          /* Серо-графитовая рамка */
 
   /* Accent colors can remain the same */
   --color-accent-primary: #10b981;
