@@ -51,7 +51,7 @@
   --color-accent-secondary: #f59e0b;
   --color-accent-danger: #ef4444;
 }
-
+}
 
 @layer components {
   .text-brand {
