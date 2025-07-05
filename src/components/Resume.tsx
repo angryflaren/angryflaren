@@ -17,10 +17,11 @@ interface ResumeProps {
   resume: ResumeSchema;
   currentLanguage?: 'en' | 'ru';
   onLanguageChange?: (lang: 'en' | 'ru') => void;
+  theme: 'light' | 'dark';
 }
 
 export const Resume: FC<ResumeProps> = memo(
-  ({ resume, currentLanguage, onLanguageChange }) => {
+  ({ resume, currentLanguage, onLanguageChange, theme }) => {
   const {
     basics,
     work,
@@ -40,7 +41,8 @@ export const Resume: FC<ResumeProps> = memo(
 
   return (
     <div
-      className={`container p-3 mx-auto lg:w-[960px] bg-color text-text print:max-w-full print:p-0 print:w-full print:px-6`}
+      className={`container p-3 mx-auto lg:w-[960px] bg-surface text-foreground print:max-w-full print:p-0 print:w-full print:px-6`}
+      data-theme={theme}
     >
       <Header
         basics={basics}
