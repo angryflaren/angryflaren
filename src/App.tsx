@@ -5,7 +5,6 @@ import { Resume as ResumeComponent } from './components/Resume';
 import type { ResumeSchema } from './types/resumeSchema';
 import resumeEn from '../resume.json';
 import resumeRu from '../resume.ru.json';
-import { ThemeSwitcher } from './components/ui/ThemeSwitcher';
 
 type Theme = 'light' | 'dark';
 
@@ -31,12 +30,12 @@ const App: FC = () => {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <ThemeSwitcher current={theme} onChange={handleThemeChange} />
       <ResumeComponent
         resume={resume}
         currentLanguage={lang}
         onLanguageChange={handleLanguageChange}
         theme={theme}
+        onThemeChange={handleThemeChange}
       />
     </I18nextProvider>
   );
