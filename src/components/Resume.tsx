@@ -43,7 +43,6 @@ export const Resume: FC<ResumeProps> = memo(
   return (
     <div
       className={`container p-3 mx-auto lg:w-[960px] bg-surface text-foreground print:max-w-full print:p-0 print:w-full print:px-6`}
-      data-theme={theme}
     >
       <Header
         basics={basics}
