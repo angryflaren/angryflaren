@@ -5,15 +5,18 @@ import { ContactInfo } from './ui/ContactInfo';
 import { SocialProfiles } from './ui/SocialProfiles';
 import type { ResumeSchema } from '../types/resumeSchema';
 import { LanguageSwitcher } from './ui/LanguageSwitcher';
+import { ThemeSwitcher } from './ui/ThemeSwitcher';
 
 interface HeaderProps {
   basics: NonNullable<ResumeSchema['basics']>;
   currentLanguage?: 'en' | 'ru';
   onLanguageChange?: (lang: 'en' | 'ru') => void;
+  theme: 'light' | 'dark';
+  onThemeChange: (theme: 'light' | 'dark') => void;
 }
 
 export const Header: FC<HeaderProps> = memo(
-  ({ basics, currentLanguage, onLanguageChange }) => {
+  ({ basics, currentLanguage, onLanguageChange, theme, onThemeChange }) => {
     const { name, label, email, phone, url, profiles, location, summary, image } =
       basics;
     const { icon: LocationIcon, color: locationColor } =
@@ -21,6 +24,16 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="relative mb-2 print:mb-0 print:p-0">
+        <div className="absolute top-4 right-4 flex items-center gap-2 print:hidden">
+          <ThemeSwitcher current={theme} onChange={onThemeChange} />
+          {currentLanguage && onLanguageChange && (
+            <LanguageSwitcher
+              current={currentLanguage}
+              onChange={onLanguageChange}
+            />
+          )}
+        </div>
+
         {image && (
           <img
             src={image}
@@ -66,13 +79,6 @@ export const Header: FC<HeaderProps> = memo(
           <ContactInfo email={email} phone={phone} url={url} />
           <SocialProfiles profiles={profiles} />
 
-          {currentLanguage && onLanguageChange && (
-            <LanguageSwitcher
-              current={currentLanguage}
-              onChange={onLanguageChange}
-            />
-          )}
-
           {summary && (
             <div className="mt-6 leading-relaxed text-foreground-secondary print:my-2 print:py-2">
               <Summary summary={summary} />
@@ -81,5 +87,5 @@ export const Header: FC<HeaderProps> = memo(
         </div>
       </header>
     );
-  },
+  }
 );
