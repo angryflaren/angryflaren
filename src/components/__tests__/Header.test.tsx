@@ -71,10 +71,10 @@ describe('Header Component', () => {
 
   it('renders basic information correctly without image', () => {
     const basics = getMockBasics();
-    render(<Header basics={basics} />);
+    render(<Header basics={basics} theme="light" onThemeChange={() => {}} />);
 
     // Debug the rendered output
-    render(<Header basics={basics} />);
+    render(<Header basics={basics} theme="light" onThemeChange={() => {}} />);
 
     // Check for necessary elements
     expect(screen.getByRole('heading', { level: 1, name: basics.name })).toBeInTheDocument();
@@ -95,7 +95,7 @@ describe('Header Component', () => {
   it('renders the image when basics.image URL is provided', () => {
     const imageUrl = 'https://example.com/profile.jpg';
     const basics = getMockBasics({ image: imageUrl });
-    render(<Header basics={basics} />);
+    render(<Header basics={basics} theme="light" onThemeChange={() => {}} />);
 
     // Query the DOM directly for the img tag using the container
     const img = screen.getByRole('img');
@@ -112,14 +112,14 @@ describe('Header Component', () => {
 
   it('does not render the image when basics.image is an empty string', () => {
     const basics = getMockBasics({ image: '' });
-    render(<Header basics={basics} />);
+    render(<Header basics={basics} theme="light" onThemeChange={() => {}} />);
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 
   it('does not render the image when basics.image is undefined', () => {
     const basics = getMockBasics();
     delete basics.image; // Simulate undefined
-    render(<Header basics={basics} />);
+    render(<Header basics={basics} theme="light" onThemeChange={() => {}} />);
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 });
