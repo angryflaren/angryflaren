@@ -1,5 +1,6 @@
 @layer base {
-  :root {
+  :root,
+  [data-theme='light'] {
     /* Modern Minimalist Theme - Light Mode */
     --color-brand: #3b82f6; /* More sophisticated blue accent */
     --color-brand-light: #60a5fa; /* Lighter blue for hover */
@@ -23,6 +24,32 @@
     --color-accent-primary: #10b981; /* Emerald green for success/positive */
     --color-accent-secondary: #f59e0b; /* Amber for warnings/neutral */
     --color-accent-danger: #ef4444; /* Red for errors/negative */
+  }
+
+  [data-theme='dark'] {
+    /* Dark Mode Theme */
+    --color-brand: #60a5fa; /* Lighter blue for dark mode */
+    --color-brand-light: #93c5fd;
+    --color-brand-dark: #3b82f6;
+
+    /* Text Colors */
+    --color-text: #e5e7eb; /* Light gray for main text */
+    --color-text-secondary: #9ca3af; /* Medium gray for secondary text */
+    --color-text-tertiary: #6b7280; /* Darker gray for tertiary text */
+    --color-text-muted: #4b5563;
+
+    /* Background Colors */
+    --color-bg: #111827; /* Very dark gray */
+    --color-bg-secondary: #1f2937; /* Dark gray for cards */
+    --color-bg-accent: #1e293b; /* Dark blue accent */
+
+    /* Border Colors */
+    --color-border: #374151; /* Gray for borders */
+
+    /* Accent colors remain the same, but you could adjust them if needed */
+    --color-accent-primary: #10b981;
+    --color-accent-secondary: #f59e0b;
+    --color-accent-danger: #ef4444;
   }
 }
 
