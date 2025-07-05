@@ -16,7 +16,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ current, onChange }) => 
     <button
       onClick={() => onChange(nextTheme)}
       className={cn(
-        'absolute top-4 left-4 flex items-center gap-2 rounded-md p-2 text-sm transition-colors print:hidden',
+        'flex items-center gap-2 rounded-md p-2 text-sm transition-colors',
         'text-foreground-tertiary hover:text-brand hover:bg-surface-secondary'
       )}
       aria-label={`Switch to ${nextTheme} mode`}
