@@ -42,7 +42,7 @@ export const Header: FC<HeaderProps> = memo(
             aria-hidden="true"
           />
         )}
-        <div className="pr-24 sm:pr-0">
+        <div className="pr-24 md:pr-0">
           <div>
             <h1 className="mb-1 text-5xl font-light text-foreground-muted print:mb-0.5 print:text-[32px]">
               {name}
