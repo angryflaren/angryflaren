@@ -27,31 +27,31 @@
   }
 
   [data-theme='dark'] {
-    /* Dark Mode Theme  */
-    --color-brand: #60a5fa; /* A slightly brighter blue for better contrast */
-    --color-brand-light: #93c5fd;
-    --color-brand-dark: #3b82f6;
+  /* Dark Mode Theme  */
+  --color-brand: #4f9efc;          /* A slightly brighter blue for better contrast */
+  --color-brand-light: #a4cafe;
+  --color-brand-dark: #2c7be5;
 
-    /* Text Colors */
-    --color-text: #e2e8f0; /* Light gray for main text (slate-200) */
-    --color-text-secondary: #94a3b8; /* Medium gray for secondary text (slate-400) */
-    --color-text-tertiary: #64748b; /* Darker gray for tertiary text (slate-500) */
-    --color-text-muted: #475569; /* (slate-600) */
+  /* Text Colors */
+  --color-text: #f1f5f9;           /* Light gray for main text (almost white) */
+  --color-text-secondary: #cbd5e1; /* Medium gray for secondary text */
+  --color-text-tertiary: #94a3b8;  /* Darker gray for tertiary text */
+  --color-text-muted: #64748b;     /* Unchanged */
 
-    /* Background Colors */
-    --color-bg: #0f172a; /* Dark slate blue, not pure black (slate-900) */
-    --color-bg-secondary: #1e293b; /* Slightly lighter slate for cards (slate-800) */
-    --color-bg-accent: #334155; /* Accent background (slate-700) */
+  /* Background Colors */
+  --color-bg: #1a1a1a;             /* Deep, soft charcoal */
+  --color-bg-secondary: #252526;   /* Slightly lighter slate for cards */
+  --color-bg-accent: #2d2d30;      /* Accent background */
 
-    /* Border Colors */
-    --color-border: #334155; /* Gray for borders (slate-700) */
+  /* Border Colors */
+  --color-border: #3c3c43;         /* Neutral gray for borders */
 
-    /* Accent colors can remain the same */
-    --color-accent-primary: #10b981;
-    --color-accent-secondary: #f59e0b;
-    --color-accent-danger: #ef4444;
-  }
+  /* Accent colors can remain the same */
+  --color-accent-primary: #10b981;
+  --color-accent-secondary: #f59e0b;
+  --color-accent-danger: #ef4444;
 }
+
 
 @layer components {
   .text-brand {
