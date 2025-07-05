@@ -18,10 +18,11 @@ interface ResumeProps {
   currentLanguage?: 'en' | 'ru';
   onLanguageChange?: (lang: 'en' | 'ru') => void;
   theme: 'light' | 'dark';
+  onThemeChange: (theme: 'light' | 'dark') => void;
 }
 
 export const Resume: FC<ResumeProps> = memo(
-  ({ resume, currentLanguage, onLanguageChange, theme }) => {
+  ({ resume, currentLanguage, onLanguageChange, theme, onThemeChange }) => {
   const {
     basics,
     work,
@@ -48,6 +49,8 @@ export const Resume: FC<ResumeProps> = memo(
         basics={basics}
         currentLanguage={currentLanguage}
         onLanguageChange={onLanguageChange}
+        theme={theme}
+        onThemeChange={onThemeChange}
       />
 
       <div className={`flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3`}>
