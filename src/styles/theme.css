@@ -27,26 +27,26 @@
   }
 
   [data-theme='dark'] {
-    /* Dark Mode Theme - Refined Palette */
+    /* Dark Mode Theme  */
     --color-brand: #60a5fa; /* A slightly brighter blue for better contrast */
     --color-brand-light: #93c5fd;
     --color-brand-dark: #3b82f6;
 
     /* Text Colors */
-    --color-text: #e2e8f0; /* Lighter gray for main text (slate-200) */
+    --color-text: #e2e8f0; /* Light gray for main text (slate-200) */
     --color-text-secondary: #94a3b8; /* Medium gray for secondary text (slate-400) */
     --color-text-tertiary: #64748b; /* Darker gray for tertiary text (slate-500) */
     --color-text-muted: #475569; /* (slate-600) */
 
     /* Background Colors */
-    --color-bg: #0f172a; /* Dark navy blue, not pure black (slate-900) */
-    --color-bg-secondary: #1e293b; /* Slightly lighter navy blue for cards (slate-800) */
+    --color-bg: #0f172a; /* Dark slate blue, not pure black (slate-900) */
+    --color-bg-secondary: #1e293b; /* Slightly lighter slate for cards (slate-800) */
     --color-bg-accent: #334155; /* Accent background (slate-700) */
 
     /* Border Colors */
     --color-border: #334155; /* Gray for borders (slate-700) */
 
-    /* Accent colors remain the same, but you could adjust them if needed */
+    /* Accent colors can remain the same */
     --color-accent-primary: #10b981;
     --color-accent-secondary: #f59e0b;
     --color-accent-danger: #ef4444;
