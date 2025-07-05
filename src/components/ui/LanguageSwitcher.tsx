@@ -16,7 +16,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ current, onChange 
     <button
       onClick={() => onChange(nextLang)}
       className={cn(
-        'absolute top-4 right-4 flex items-center gap-2 rounded-md p-2 text-sm transition-colors hover:bg-slate-200/50 print:hidden',
+        'absolute top-4 right-4 flex items-center gap-2 rounded-md p-2 text-sm transition-colors hover:bg-surface-secondary print:hidden',
         'text-foreground-tertiary hover:text-brand'
       )}
       aria-label={t('header.switch_language') as string}
