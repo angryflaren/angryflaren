@@ -23,10 +23,13 @@ const App: FC = () => {
   };
 
   useEffect(() => {
+    // Apply theme to the root <html> element
+    document.documentElement.setAttribute('data-theme', theme);
+
     i18n.changeLanguage(lang);
     setResume(lang === 'ru' ? resumeRu : resumeEn);
     document.title = t('meta.title');
-  }, [lang, t]);
+  }, [lang, t, theme]);
 
   return (
     <I18nextProvider i18n={i18n}>
