@@ -32,7 +32,7 @@ export const Header: FC<HeaderProps> = memo(
               onChange={onLanguageChange}
             />
           )}
-        </div>
+        <div className="pr-24 sm:pr-0">
 
         {image && (
           <img
