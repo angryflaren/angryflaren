@@ -3,6 +3,7 @@
   "basics": {
     "name": "Матвей Жучков",
     "label": "Backend-разработчик (стажер)",
+    "image": "photo.jpg",
     "email": "matthewzhv@outlook.com",
     "location": {
       "city": "Нижний Новгород",
