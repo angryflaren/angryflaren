@@ -20,7 +20,7 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
 
           const iconData = getIcon(profile.network);
           const Icon = iconData?.icon;
-          const color = iconData?.color || '#6c6c6c';
+          const iconColor = iconData?.color || '#6c6c6c';
 
           return (
             <a
@@ -28,12 +28,11 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
               href={profile.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex gap-1 items-center text-sm hover:underline"
+              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:underline"
               title={`${profile.network} ${t('common.profile')}`}
-              style={{ color }}
             >
               {Icon ? (
-                <Icon className="w-4 h-4" />
+                <Icon className="w-4 h-4" style={{ color: iconColor }} />
               ) : (
                 <span className="inline-block w-4 h-4">•</span>
               )}
