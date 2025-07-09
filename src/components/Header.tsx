@@ -24,9 +24,22 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="mb-6 print:mb-2">
-        <div className="grid grid-cols-[1fr_auto] items-center gap-x-8">
-          {/* -- Левая колонка: Основная информация -- */}
-          <div>
+        <div className="flex flex-row items-center gap-x-8">
+          {/* -- Левая колонка: Фотография -- */}
+          {image && (
+            <div className="flex-shrink-0">
+              <img
+                src={image}
+                alt={`Фотография ${name}`}
+                className="object-cover w-28 h-28 rounded-full"
+                aria-hidden="true"
+                loading="lazy"
+              />
+            </div>
+          )}
+
+          {/* -- Правая колонка: Основная информация -- */}
+          <div className="flex-1">
             <div className="flex items-center justify-between w-full mb-1">
               <h1 className="text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
                 {name}
@@ -68,19 +81,6 @@ export const Header: FC<HeaderProps> = memo(
               <SocialProfiles profiles={profiles} />
             </div>
           </div>
-
-          {/* -- Правая колонка: Фотография -- */}
-          {image && (
-            <div>
-              <img
-                src={image}
-                alt={`Фотография ${name}`}
-                className="object-cover w-28 h-28 rounded-full"
-                aria-hidden="true"
-                loading="lazy"
-              />
-            </div>
-          )}
         </div>
 
         {/* -- Блок "Обо мне" -- */}
