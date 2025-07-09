@@ -38,27 +38,27 @@ export const Header: FC<HeaderProps> = memo(
         </div>
 
         {/* --- Основной блок шапки --- */}
-        <div className="flex flex-row items-start justify-between gap-8">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:text-left md:justify-between">
           {/* -- Левая колонка: Информация -- */}
           <div className="flex-grow">
-            <h1 className="mb-1 text-4xl font-bold text-foreground sm:text-5xl print:text-[32px]">
+            <h1 className="mb-1 text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
               {name}
             </h1>
-            <h2 className="mb-3 text-lg font-medium text-brand sm:text-xl print:mb-1 print:text-[16px]">
+            <h2 className="mb-4 text-lg font-medium text-brand sm:text-xl print:mb-2 print:text-[16px]">
               {label}
             </h2>
 
-            {/* Группа контактов с уменьшенным интервалом */}
-            <div className="flex flex-col items-start gap-1.5 text-sm">
+            {/* Группа контактов */}
+            <div className="flex flex-col items-center gap-2 md:items-start">
               {location && (
                 <div
-                  className="flex items-center gap-2 text-foreground-tertiary print:gap-1"
+                  className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
                   role="contentinfo"
                   aria-label="Location"
                 >
                   <LocationIcon
                     style={{ color: locationColor }}
-                    className="w-3.5 h-3.5 print:w-3 print:h-3"
+                    className="w-4 h-4 print:w-3 print:h-3"
                     aria-hidden="true"
                   />
                   {[location.city, location.region].filter(Boolean).join(', ')}
@@ -71,11 +71,11 @@ export const Header: FC<HeaderProps> = memo(
 
           {/* -- Правая колонка: Фотография -- */}
           {image && (
-            <div className="flex-shrink-0">
+            <div className="order-first flex-shrink-0 md:order-last">
               <img
                 src={image}
                 alt={`Фотография ${name}`}
-                className="object-cover w-32 h-32 rounded-full shadow-md"
+                className="object-cover w-36 h-36 rounded-full"
                 aria-hidden="true"
                 loading="lazy"
               />
