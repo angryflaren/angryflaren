@@ -17,7 +17,7 @@ interface HeaderProps {
 
 export const Header: FC<HeaderProps> = memo(
   ({ basics, currentLanguage, onLanguageChange, theme, onThemeChange }) => {
-    const { name, label, email, phone, url, profiles, location, summary } =
+    const { name, label, email, phone, url, profiles, location, summary, image } =
       basics;
     const { icon: LocationIcon, color: locationColor } =
       getContactIcon('location');
@@ -64,9 +64,9 @@ export const Header: FC<HeaderProps> = memo(
             <SocialProfiles profiles={profiles} />
           </div>
 
-          {/* -- Правая колонка: Переключатели -- */}
-          <div className="flex flex-row-reverse items-center justify-between w-full order-1 md:w-auto md:flex-col md:items-end md:justify-start md:gap-4 print:hidden">
-            <div className="flex items-center gap-2">
+          {/* -- Правая колонка: Изображение и переключатели -- */}
+          <div className="flex flex-row-reverse items-center justify-between w-full order-1 md:w-auto md:flex-col md:items-end md:justify-start md:gap-4">
+            <div className="flex items-center gap-2 print:hidden">
               <ThemeSwitcher current={theme} onChange={onThemeChange} />
               {currentLanguage && onLanguageChange && (
                 <LanguageSwitcher
@@ -75,6 +75,15 @@ export const Header: FC<HeaderProps> = memo(
                 />
               )}
             </div>
+            {image && (
+              <img
+                src={image}
+                alt={`Headshot of ${name}`}
+                className="object-cover w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto sm:mx-0 print:w-24 print:h-24 print:rounded-md"
+                aria-hidden="true"
+                loading="lazy"
+              />
+            )}
           </div>
         </div>
 
