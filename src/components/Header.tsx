@@ -24,32 +24,30 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="mb-6 print:mb-2">
-        {/* --- Верхняя строка: Имя и переключатели --- */}
-        <div className="flex items-center justify-between w-full mb-5">
-          <h1 className="text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
-            {name}
-          </h1>
-          <div className="flex items-center gap-2 print:hidden">
-            <ThemeSwitcher current={theme} onChange={onThemeChange} />
-            {currentLanguage && onLanguageChange && (
-              <LanguageSwitcher
-                current={currentLanguage}
-                onChange={onLanguageChange}
-              />
-            )}
-          </div>
-        </div>
-
-        {/* --- Основной блок: Контакты и Фото --- */}
-        <div className="flex flex-row items-start justify-start gap-8">
+        <div className="flex flex-row items-start justify-between gap-x-8">
           {/* -- Левая колонка: Основная информация -- */}
-          <div className="flex flex-col items-start flex-grow">
+          <div className="flex-1">
+            <div className="flex items-center justify-between w-full mb-1">
+              <h1 className="text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
+                {name}
+              </h1>
+              <div className="flex items-center gap-2 print:hidden">
+                <ThemeSwitcher current={theme} onChange={onThemeChange} />
+                {currentLanguage && onLanguageChange && (
+                  <LanguageSwitcher
+                    current={currentLanguage}
+                    onChange={onLanguageChange}
+                  />
+                )}
+              </div>
+            </div>
+
             <h2 className="mb-4 text-lg font-medium text-brand sm:text-xl print:mb-2 print:text-[16px]">
               {label}
             </h2>
-            
+
             {/* Группа контактов */}
-            <div className="flex flex-col items-start gap-1.5">
+            <div className="flex flex-col items-start gap-1">
               {location && (
                 <div
                   className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
@@ -66,7 +64,6 @@ export const Header: FC<HeaderProps> = memo(
                     .join(', ')}
                 </div>
               )}
-              {/* Эти компоненты теперь не имеют своих отступов */}
               <ContactInfo email={email} phone={phone} url={url} />
               <SocialProfiles profiles={profiles} />
             </div>
@@ -78,7 +75,7 @@ export const Header: FC<HeaderProps> = memo(
               <img
                 src={image}
                 alt={`Фотография ${name}`}
-                className="object-cover w-32 h-32 rounded-full"
+                className="object-cover w-28 h-28 rounded-full"
                 aria-hidden="true"
                 loading="lazy"
               />
@@ -88,11 +85,11 @@ export const Header: FC<HeaderProps> = memo(
 
         {/* -- Блок "Обо мне" -- */}
         {summary && (
-          <div className="mt-8 leading-relaxed text-foreground-secondary print:my-2 print:py-2">
+          <div className="mt-6 leading-relaxed text-foreground-secondary print:mt-3 print:py-2">
             <Summary summary={summary} />
           </div>
         )}
       </header>
     );
-  }
+  },
 );
