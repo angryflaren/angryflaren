@@ -76,14 +76,14 @@ export const Header: FC<HeaderProps> = memo(
               )}
             </div>
             {image && (
-              <img
-                src={image} // Используем только это свойство
-                alt={`Headshot of ${name}`}
-                className="object-cover w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto sm:mx-0 print:w-24 print:h-24 print:rounded-md"
-                aria-hidden="true"
-                loading="lazy"
-              />
-            )}
+            <img
+              src={image}
+              alt={`Headshot of ${name}`}
+              className="object-cover w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto sm:mx-0 print:w-24 print:h-24 print:rounded-md"
+              aria-hidden="true"
+              loading="lazy"
+            />
+          )}
           </div>
         </div>
 
