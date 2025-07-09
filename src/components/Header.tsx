@@ -24,10 +24,10 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="mb-4 print:mb-2">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">
-          {/* -- Основная информация (слева) -- */}
+        <div className="flex flex-col-reverse items-center gap-6 md:flex-row md:items-start md:justify-between">
+          {/* -- Левая колонка: Основная информация -- */}
           <div className="flex-grow text-center md:text-left">
-            <h1 className="mb-1 text-4xl font-bold text-foreground sm:text-5xl print:text-[32px]">
+            <h1 className="mb-1 text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
               {name}
             </h1>
             {label && (
@@ -36,10 +36,10 @@ export const Header: FC<HeaderProps> = memo(
               </h2>
             )}
 
-            <div className="flex flex-col items-center gap-2 md:items-start">
+            <div className="flex flex-col items-center gap-2 mt-4 md:items-start">
               {location && (
                 <div
-                  className="flex items-center gap-2 print:gap-1"
+                  className="flex items-center gap-2 text-sm print:gap-1"
                   role="contentinfo"
                   aria-label="Location"
                 >
@@ -63,7 +63,7 @@ export const Header: FC<HeaderProps> = memo(
             </div>
           </div>
 
-          {/* -- Фотография и переключатели (справа) -- */}
+          {/* -- Правая колонка: Фотография и переключатели -- */}
           <div className="flex flex-col items-center flex-shrink-0 gap-4">
             <div className="flex items-center gap-2 print:hidden">
               <ThemeSwitcher current={theme} onChange={onThemeChange} />
@@ -77,7 +77,7 @@ export const Header: FC<HeaderProps> = memo(
             {image && (
               <img
                 src={image}
-                alt={`Фотография ${name}`}
+                alt={`Фото ${name}`} // чуть проще alt-текст
                 className="object-cover w-32 h-32 rounded-full md:w-36 md:h-36"
                 aria-hidden="true"
                 loading="lazy"
@@ -88,7 +88,7 @@ export const Header: FC<HeaderProps> = memo(
 
         {/* -- Блок "Обо мне" -- */}
         {summary && (
-          <div className="mt-6 leading-relaxed text-center text-foreground-secondary md:text-left print:my-2 print:py-2">
+          <div className="mt-8 leading-relaxed text-foreground-secondary print:my-2 print:py-2">
             <Summary summary={summary} />
           </div>
         )}
