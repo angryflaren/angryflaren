@@ -19,7 +19,6 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
           if (!profile.network) return null;
 
           const iconData = getIcon(profile.network);
-          // Use default values when icon is not found
           const Icon = iconData?.icon;
           const color = iconData?.color || '#6c6c6c';
 
