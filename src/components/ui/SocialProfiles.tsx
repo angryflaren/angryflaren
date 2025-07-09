@@ -27,7 +27,7 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
             href={profile.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-foreground-tertiary hover:text-brand"
+            className="inline-flex items-center gap-2 text-sm text-brand hover:underline"
             title={`${profile.network} ${t('common.profile')}`}
           >
             {Icon ? (
@@ -35,7 +35,7 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
             ) : (
               <span className="inline-block w-4 h-4">•</span>
             )}
-            <span className="hover:underline">{profile.username}</span>
+            <span className="font-medium">{profile.network}</span>
           </a>
         );
       })}
