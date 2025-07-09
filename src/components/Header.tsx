@@ -1,9 +1,9 @@
 import { FC, memo } from 'react';
+import type { ResumeSchema } from '../../types/resumeSchema';
 import { getContactIcon } from '../lib/socialIcons';
 import { Summary } from './Summary';
 import { ContactInfo } from './ui/ContactInfo';
 import { SocialProfiles } from './ui/SocialProfiles';
-import type { ResumeSchema } from '../types/resumeSchema';
 import { LanguageSwitcher } from './ui/LanguageSwitcher';
 import { ThemeSwitcher } from './ui/ThemeSwitcher';
 
@@ -23,24 +23,33 @@ export const Header: FC<HeaderProps> = memo(
       getContactIcon('location');
 
     return (
-      <header className="mb-2 print:mb-0 print:p-0">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between md:gap-6">
-          {/* -- Левая колонка: Основной текст -- */}
-          <div className="flex-grow order-2 md:order-1">
-            <div>
-              <h1 className="mb-1 text-5xl font-light text-foreground-muted print:mb-0.5 print:text-[32px]">
-                {name}
-              </h1>
-              {label && (
-                <h2 className="mb-2 text-xl font-normal text-foreground print:mb-1 print:text-[16px]">
-                  {label}
-                </h2>
-              )}
-            </div>
+      <header className="relative mb-2 print:mb-0 print:p-0">
+        {/* --- Переключатели языка и темы --- */}
+        <div className="absolute top-0 right-0 flex items-center gap-2 print:hidden">
+          <ThemeSwitcher current={theme} onChange={onThemeChange} />
+          {currentLanguage && onLanguageChange && (
+            <LanguageSwitcher
+              current={currentLanguage}
+              onChange={onLanguageChange}
+            />
+          )}
+        </div>
+
+        <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+          {/* -- Левая колонка: Основная информация -- */}
+          <div className="flex-grow">
+            <h1 className="mb-1 text-5xl font-light text-foreground-muted print:mb-0.5 print:text-[32px]">
+              {name}
+            </h1>
+            {label && (
+              <h2 className="mb-2 text-xl font-normal text-foreground print:mb-1 print:text-[16px]">
+                {label}
+              </h2>
+            )}
 
             {location && (
               <div
-                className="flex gap-2 items-center print:gap-1"
+                className="flex items-center gap-2 print:gap-1"
                 role="contentinfo"
                 aria-label="Location"
               >
@@ -64,27 +73,18 @@ export const Header: FC<HeaderProps> = memo(
             <SocialProfiles profiles={profiles} />
           </div>
 
-          {/* -- Правая колонка: Изображение и переключатели -- */}
-          <div className="flex flex-row-reverse items-center justify-between w-full order-1 md:w-auto md:flex-col md:items-end md:justify-start md:gap-4">
-            <div className="flex items-center gap-2 print:hidden">
-              <ThemeSwitcher current={theme} onChange={onThemeChange} />
-              {currentLanguage && onLanguageChange && (
-                <LanguageSwitcher
-                  current={currentLanguage}
-                  onChange={onLanguageChange}
-                />
-              )}
-            </div>
-            {image && (
+          {/* -- Правая колонка: Изображение -- */}
+          {image && (
+            <div className="flex-shrink-0 order-first w-32 mx-auto mb-4 md:order-last md:mx-0 md:mb-0">
               <img
                 src={image}
-                alt={`Headshot of ${name}`}
-                className="object-cover w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto sm:mx-0 print:w-24 print:h-24 print:rounded-md"
+                alt={`Фотография ${name}`}
+                className="object-cover w-32 h-32 rounded-full print:w-24 print:h-24"
                 aria-hidden="true"
                 loading="lazy"
               />
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* -- Блок "Обо мне" -- */}
