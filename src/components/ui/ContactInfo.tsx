@@ -16,7 +16,7 @@ export const ContactInfo: FC<ContactInfoProps> = ({ email, phone, url }) => {
 
   return (
     <div
-      className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-foreground-tertiary print:mt-0 print:align-middle"
+      className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-foreground-tertiary print:gap-1"
       role="contentinfo"
       aria-label={t('common.contactInfo')}
     >
