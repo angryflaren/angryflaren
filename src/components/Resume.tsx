@@ -41,9 +41,7 @@ export const Resume: FC<ResumeProps> = memo(
 		if (!basics) return null;
 
 		return (
-			<div
-				className={`container p-3 mx-auto lg:w-[960px] bg-surface text-foreground print:max-w-full print:p-0 print:w-full print:px-6`}
-			>
+			<div className="container p-3 mx-auto lg:w-[960px] bg-surface text-foreground print:max-w-full print:p-0 print:w-full print:px-6">
 				<Header
 					basics={basics}
 					currentLanguage={currentLanguage}
@@ -52,27 +50,15 @@ export const Resume: FC<ResumeProps> = memo(
 					onThemeChange={onThemeChange}
 				/>
 
-				<div className={`flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3`}>
-					<div className={`lg:w-2/3 print:w-[72%]`}>
+				<div className="flex flex-col gap-6 lg:flex-row print:flex-row print:gap-3">
+					<div className="lg:w-2/3 print:w-[72%]">
 						{work && work.length > 0 && <WorkExperience work={work} />}
 						{education && education.length > 0 && <Education education={education} />}
 						{projects && projects.length > 0 && <Projects projects={projects} />}
 						{volunteer && volunteer.length > 0 && <Volunteer volunteer={volunteer} />}
 					</div>
 
-					<div className={`lg:w-1/3 print:w-[28%]`}>
-						{/* +++ БЛОК ДЛЯ ФОТОГРАФИИ +++ */}
-						{basics.image && (
-							<div className="flex justify-center mb-4">
-								<img
-									src={basics.image}
-									alt={`Фото ${basics.name}`}
-									className="object-cover w-32 h-32 rounded-full print:w-24 print:h-24"
-									loading="lazy"
-								/>
-							</div>
-						)}
-						{/* +++ КОНЕЦ БЛОКА +++ */}
+					<div className="lg:w-1/3 print:w-[28%]">
 						<div className="print:space-y-2">
 							{skills && skills.length > 0 && <Skills skills={skills} />}
 							{languages && languages.length > 0 && <Languages languages={languages} />}
