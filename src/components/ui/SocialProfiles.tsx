@@ -14,7 +14,7 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
 
   return (
     <div className="print:mt-1">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 print:mt-1">
       {profiles.map((profile, index) => {
         if (!profile.network) return null;
 
