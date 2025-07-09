@@ -16,19 +16,19 @@ export const ContactInfo: FC<ContactInfoProps> = ({ email, phone, url }) => {
 
   return (
     <div
-      className="flex flex-wrap gap-6 mt-4 text-sm text-foreground-tertiary print:mt-0 print:align-middle"
+      className="flex flex-col items-start gap-1.5 text-foreground-tertiary print:gap-1"
       role="contentinfo"
       aria-label={t('common.contactInfo')}
     >
       {email && (
         <a
           href={`mailto:${email}`}
-          className="flex gap-2 items-center transition-colors hover:text-brand print:gap-1"
+          className="flex items-center gap-2 transition-colors hover:text-brand"
           aria-label={`${t('common.email')}: ${email}`}
         >
           <EmailIcon
             style={{ color: emailColor }}
-            className="w-4 h-4 text-brand print:w-3 print:h-3"
+            className="w-3.5 h-3.5 text-brand print:w-3 print:h-3"
             aria-hidden="true"
           />
           {email}
@@ -37,12 +37,12 @@ export const ContactInfo: FC<ContactInfoProps> = ({ email, phone, url }) => {
       {phone && (
         <a
           href={`tel:${phone}`}
-          className="flex gap-2 items-center transition-colors hover:text-brand print:gap-1"
+          className="flex items-center gap-2 transition-colors hover:text-brand"
           aria-label={`${t('common.phone')}: ${phone}`}
         >
           <PhoneIcon
             style={{ color: phoneColor }}
-            className="w-4 h-4 text-brand print:flex"
+            className="w-3.5 h-3.5 text-brand print:flex"
             aria-hidden="true"
           />
           {phone}
@@ -53,10 +53,10 @@ export const ContactInfo: FC<ContactInfoProps> = ({ email, phone, url }) => {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 items-center transition-colors hover:text-brand print:gap-1"
+          className="flex items-center gap-2 transition-colors hover:text-brand"
           aria-label={`${t('common.website')}: ${url}`}
         >
-          <BsGlobe className="w-4 h-4 text-brand print:w-4 print:h-4" aria-hidden="true" />
+          <BsGlobe className="w-3.5 h-3.5 text-brand" aria-hidden="true" />
           {url}
         </a>
       )}
