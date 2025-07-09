@@ -38,38 +38,30 @@ export const Header: FC<HeaderProps> = memo(
         </div>
 
         {/* --- Основной блок шапки --- */}
-        <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:justify-between">
-          
+        <div className="flex flex-row items-start justify-between gap-8">
           {/* -- Левая колонка: Информация -- */}
-          <div className="text-center md:text-left">
-            <h1 className="mb-1 text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
+          <div className="flex-grow">
+            <h1 className="mb-1 text-4xl font-bold text-foreground sm:text-5xl print:text-[32px]">
               {name}
             </h1>
-            <h2 className="mb-4 text-lg font-medium text-brand sm:text-xl print:mb-2 print:text-[16px]">
+            <h2 className="mb-3 text-lg font-medium text-brand sm:text-xl print:mb-1 print:text-[16px]">
               {label}
             </h2>
-            
-            {/* Группа контактов с плотным интервалом */}
-            <div className="flex flex-col items-center gap-1.5 md:items-start">
+
+            {/* Группа контактов с уменьшенным интервалом */}
+            <div className="flex flex-col items-start gap-1.5 text-sm">
               {location && (
                 <div
-                  className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
+                  className="flex items-center gap-2 text-foreground-tertiary print:gap-1"
                   role="contentinfo"
                   aria-label="Location"
                 >
                   <LocationIcon
                     style={{ color: locationColor }}
-                    className="w-4 h-4 print:w-3 print:h-3"
+                    className="w-3.5 h-3.5 print:w-3 print:h-3"
                     aria-hidden="true"
                   />
-                  {[
-                    location.address,
-                    location.city,
-                    location.region,
-                    location.postalCode,
-                  ]
-                    .filter(Boolean)
-                    .join(', ')}
+                  {[location.city, location.region].filter(Boolean).join(', ')}
                 </div>
               )}
               <ContactInfo email={email} phone={phone} url={url} />
@@ -83,7 +75,7 @@ export const Header: FC<HeaderProps> = memo(
               <img
                 src={image}
                 alt={`Фотография ${name}`}
-                className="object-cover w-36 h-36 rounded-full"
+                className="object-cover w-32 h-32 rounded-full shadow-md"
                 aria-hidden="true"
                 loading="lazy"
               />
