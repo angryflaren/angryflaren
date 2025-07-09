@@ -13,13 +13,11 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
   if (!profiles || profiles.length === 0) return null;
 
   return (
-    <div className="print:mt-1">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 print:mt-1">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 print:mt-1">
       {profiles.map((profile, index) => {
         if (!profile.network) return null;
 
         const iconData = getIcon(profile.network);
-        // Use default values when icon is not found
         const Icon = iconData?.icon;
         const color = iconData?.color || '#6c6c6c';
 
@@ -29,7 +27,7 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
             href={profile.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-brand"
+            className="inline-flex items-center gap-2 text-sm text-foreground-tertiary hover:text-brand"
             title={`${profile.network} ${t('common.profile')}`}
           >
             {Icon ? (
@@ -41,7 +39,6 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
           </a>
         );
       })}
-    </div>
     </div>
   );
 });
