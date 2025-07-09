@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
-import type { ResumeSchema } from '../../types/resumeSchema';
+import type { ResumeSchema } from '../types/resumeSchema';
 import { getContactIcon } from '../lib/socialIcons';
 import { Summary } from './Summary';
 import { ContactInfo } from './ui/ContactInfo';
