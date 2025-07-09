@@ -24,9 +24,12 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="mb-6 print:mb-2">
-        {/* --- Переключатели вынесены наверх --- */}
-        <div className="flex justify-end w-full mb-4 print:hidden">
-          <div className="flex items-center gap-2">
+        {/* --- Верхняя строка: Имя и переключатели --- */}
+        <div className="flex items-center justify-between w-full mb-5">
+          <h1 className="text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
+            {name}
+          </h1>
+          <div className="flex items-center gap-2 print:hidden">
             <ThemeSwitcher current={theme} onChange={onThemeChange} />
             {currentLanguage && onLanguageChange && (
               <LanguageSwitcher
@@ -37,19 +40,16 @@ export const Header: FC<HeaderProps> = memo(
           </div>
         </div>
 
-        {/* --- Основной блок шапки --- */}
-        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:text-left md:justify-between">
-          {/* -- Левая колонка: Информация -- */}
-          <div className="flex-grow">
-            <h1 className="mb-1 text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
-              {name}
-            </h1>
+        {/* --- Основной блок: Контакты и Фото --- */}
+        <div className="flex flex-row items-start justify-start gap-8">
+          {/* -- Левая колонка: Основная информация -- */}
+          <div className="flex flex-col items-start flex-grow">
             <h2 className="mb-4 text-lg font-medium text-brand sm:text-xl print:mb-2 print:text-[16px]">
               {label}
             </h2>
-
+            
             {/* Группа контактов */}
-            <div className="flex flex-col items-center gap-2 md:items-start">
+            <div className="flex flex-col items-start gap-1.5">
               {location && (
                 <div
                   className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
@@ -61,9 +61,12 @@ export const Header: FC<HeaderProps> = memo(
                     className="w-4 h-4 print:w-3 print:h-3"
                     aria-hidden="true"
                   />
-                  {[location.city, location.region].filter(Boolean).join(', ')}
+                  {[location.city, location.region]
+                    .filter(Boolean)
+                    .join(', ')}
                 </div>
               )}
+              {/* Эти компоненты теперь не имеют своих отступов */}
               <ContactInfo email={email} phone={phone} url={url} />
               <SocialProfiles profiles={profiles} />
             </div>
@@ -71,11 +74,11 @@ export const Header: FC<HeaderProps> = memo(
 
           {/* -- Правая колонка: Фотография -- */}
           {image && (
-            <div className="order-first flex-shrink-0 md:order-last">
+            <div className="flex-shrink-0">
               <img
                 src={image}
                 alt={`Фотография ${name}`}
-                className="object-cover w-36 h-36 rounded-full"
+                className="object-cover w-32 h-32 rounded-full"
                 aria-hidden="true"
                 loading="lazy"
               />
