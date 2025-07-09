@@ -30,8 +30,8 @@ export const Header: FC<HeaderProps> = memo(
             <div className="flex-shrink-0">
               <img
                 src={image}
-                alt={`Фотография ${name}`}
-                className="object-cover w-28 h-28 rounded-full"
+                alt={`Фотография`}
+                className="object-cover w-32 h-32 rounded-full"
                 aria-hidden="true"
                 loading="lazy"
               />
