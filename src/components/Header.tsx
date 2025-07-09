@@ -24,9 +24,9 @@ export const Header: FC<HeaderProps> = memo(
 
     return (
       <header className="mb-6 print:mb-2">
-        <div className="flex flex-row items-start justify-between gap-x-8">
+        <div className="grid grid-cols-[1fr_auto] items-center gap-x-8">
           {/* -- Левая колонка: Основная информация -- */}
-          <div className="flex-1">
+          <div>
             <div className="flex items-center justify-between w-full mb-1">
               <h1 className="text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
                 {name}
@@ -47,7 +47,7 @@ export const Header: FC<HeaderProps> = memo(
             </h2>
 
             {/* Группа контактов */}
-            <div className="flex flex-col items-start gap-1">
+            <div className="flex flex-col items-start gap-1.5">
               {location && (
                 <div
                   className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
@@ -71,7 +71,7 @@ export const Header: FC<HeaderProps> = memo(
 
           {/* -- Правая колонка: Фотография -- */}
           {image && (
-            <div className="flex-shrink-0">
+            <div>
               <img
                 src={image}
                 alt={`Фотография ${name}`}
