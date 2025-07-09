@@ -23,29 +23,43 @@ export const Header: FC<HeaderProps> = memo(
       getContactIcon('location');
 
     return (
-      <header className="mb-4 print:mb-2">
-        <div className="flex flex-col-reverse items-center gap-6 md:flex-row md:items-start md:justify-between">
-          {/* -- Левая колонка: Основная информация -- */}
-          <div className="flex-grow text-center md:text-left">
+      <header className="mb-6 print:mb-2">
+        {/* --- Переключатели вынесены наверх --- */}
+        <div className="flex justify-end w-full mb-4 print:hidden">
+          <div className="flex items-center gap-2">
+            <ThemeSwitcher current={theme} onChange={onThemeChange} />
+            {currentLanguage && onLanguageChange && (
+              <LanguageSwitcher
+                current={currentLanguage}
+                onChange={onLanguageChange}
+              />
+            )}
+          </div>
+        </div>
+
+        {/* --- Основной блок шапки --- */}
+        <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:items-center md:justify-between">
+          
+          {/* -- Левая колонка: Информация -- */}
+          <div className="text-center md:text-left">
             <h1 className="mb-1 text-4xl font-light text-foreground-muted sm:text-5xl print:text-[32px]">
               {name}
             </h1>
-            {label && (
-              <h2 className="mb-3 text-lg font-medium text-brand sm:text-xl print:mb-1 print:text-[16px]">
-                {label}
-              </h2>
-            )}
-
-            <div className="flex flex-col items-center gap-2 mt-4 md:items-start">
+            <h2 className="mb-4 text-lg font-medium text-brand sm:text-xl print:mb-2 print:text-[16px]">
+              {label}
+            </h2>
+            
+            {/* Группа контактов с плотным интервалом */}
+            <div className="flex flex-col items-center gap-1.5 md:items-start">
               {location && (
                 <div
-                  className="flex items-center gap-2 text-sm print:gap-1"
+                  className="flex items-center gap-2 text-sm text-foreground-tertiary print:gap-1"
                   role="contentinfo"
                   aria-label="Location"
                 >
                   <LocationIcon
                     style={{ color: locationColor }}
-                    className="w-4 h-4 text-brand print:w-3 print:h-3"
+                    className="w-4 h-4 print:w-3 print:h-3"
                     aria-hidden="true"
                   />
                   {[
@@ -63,27 +77,18 @@ export const Header: FC<HeaderProps> = memo(
             </div>
           </div>
 
-          {/* -- Правая колонка: Фотография и переключатели -- */}
-          <div className="flex flex-col items-center flex-shrink-0 gap-4">
-            <div className="flex items-center gap-2 print:hidden">
-              <ThemeSwitcher current={theme} onChange={onThemeChange} />
-              {currentLanguage && onLanguageChange && (
-                <LanguageSwitcher
-                  current={currentLanguage}
-                  onChange={onLanguageChange}
-                />
-              )}
-            </div>
-            {image && (
+          {/* -- Правая колонка: Фотография -- */}
+          {image && (
+            <div className="flex-shrink-0">
               <img
                 src={image}
-                alt={`Фото ${name}`} // чуть проще alt-текст
-                className="object-cover w-32 h-32 rounded-full md:w-36 md:h-36"
+                alt={`Фотография ${name}`}
+                className="object-cover w-36 h-36 rounded-full"
                 aria-hidden="true"
                 loading="lazy"
               />
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* -- Блок "Обо мне" -- */}
