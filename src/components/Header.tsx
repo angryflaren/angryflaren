@@ -41,7 +41,7 @@ export const Header: FC<HeaderProps> = memo(
           {/* -- Правая колонка: Основная информация -- */}
           <div className="flex-1">
             <div className="flex items-center justify-between w-full mb-1">
-              <h1 className="text-5xl font-light tracking-tighter text-foreground print:text-[32px]">
+              <h1 className="text-5xl font-light tracking-tight text-foreground print:text-[32px]">
                 {name}
               </h1>
               <div className="flex items-center gap-2 print:hidden">
